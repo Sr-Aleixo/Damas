@@ -1,0 +1,39 @@
+<canvas width = "400" height="400"></canvas>
+
+<script>
+	
+	var tela = document.querySelector ("canvas");
+	var pincel = tela.getContext ("2d");
+
+	function desenhaQuadrado (x,y, cor) {
+		pincel.fillStyle = cor;
+		pincel.fillRect(x,y,50,50);
+		pincel.strokeStyle= "black";
+		pincel.strokeRect(x,y,50,50);
+	}
+
+
+	function linha (x,y) {
+		for ( x = 0; x < 400; x = x +100) {
+
+			desenhaQuadrado ( x, 0, "black");
+		
+		}
+		 for ( x= 50; x < 400; x = x + 100) {
+		 	desenhaQuadrado (x, 0, "white");
+		 }
+	
+
+		 for (y=50; y < 400; y = y + 100) {
+		 	desenhaQuadrado (0, y, "white");
+		 }
+
+		 for (y=100; y < 400; y = y + 100) {
+		 	desenhaQuadrado (0, y, "black");
+		 }
+	}
+
+	
+	linha ();
+	
+
